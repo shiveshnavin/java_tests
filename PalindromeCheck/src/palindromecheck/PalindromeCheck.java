@@ -19,10 +19,15 @@ public class PalindromeCheck {
     {
         ArrayList<String> list=new ArrayList<>();
         
-        for(int i=3;i<str.length()/2;i++)
+        for(int len=3;len<=str.length();len++)
         {
-            for(int j=0;j<str.length();j++)
+            for(int index=0;index<=(str.length()-len);index++)
             {
+                
+                
+                String subStr=str.substring(index, index+len);
+                System.out.println("Substring : "+subStr);
+                
                 
             }
             
@@ -31,12 +36,19 @@ public class PalindromeCheck {
         return list;
     }
     
+    public PalindromeCheck()
+    {
+         Scanner scan=new Scanner(System.in);
+         String toCheck=scan.nextLine();
+        
+        getSubStrings(toCheck);
+    }
     
     public static void main(String[] args) {
         // TODO code application logic here
-        Scanner scan=new Scanner(System.in);
-        String toCheck=scan.nextLine();
-        
+       
+       System.out.println("Start");
+       PalindromeCheck palCheck=new PalindromeCheck();
         
     }
     
