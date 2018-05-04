@@ -93,14 +93,19 @@ public class PalindromeCheck {
     public static void main(String[] args) {
         // TODO code application logic here
        
-       System.out.println("Start");
        
        String toCheck="";
        if(args.length>0)
        {
+           /**
+            * if string is passed from CLI
+            */
            toCheck=args[0];
        }
        else{
+           /**
+            * to read input string from user
+            */
            
             Scanner scan=new Scanner(System.in);
             toCheck=scan.nextLine();
@@ -109,6 +114,9 @@ public class PalindromeCheck {
        
        
        
+        
+       
+       System.out.println("Start with : "+toCheck);
        
        PalindromeCheck palCheck=new PalindromeCheck(toCheck);
       
