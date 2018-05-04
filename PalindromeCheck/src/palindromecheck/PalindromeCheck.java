@@ -9,7 +9,8 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Scanner;
 /**
- *
+ * @compile run in src :  javac palindromecheck/PalindromeCheck.java
+ * @run run in src :  java palindromecheck.PalindromeCheck
  * @author shivesh
  */
 public class PalindromeCheck {
@@ -93,9 +94,21 @@ public class PalindromeCheck {
         // TODO code application logic here
        
        System.out.println("Start");
-       Scanner scan=new Scanner(System.in);
-       String toCheck=scan.nextLine();
-         
+       
+       String toCheck="";
+       if(args.length>0)
+       {
+           toCheck=args[0];
+       }
+       else{
+           
+            Scanner scan=new Scanner(System.in);
+            toCheck=scan.nextLine();
+
+       }
+       
+       
+       
        
        PalindromeCheck palCheck=new PalindromeCheck(toCheck);
       
